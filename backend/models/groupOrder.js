@@ -9,9 +9,9 @@ const groupOrderSchema = new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
-    productId:{
+    materialId:{
         type:mongoose.Schema.Types.ObjectId,
-        rer:'Product'
+        rer:'Material'
     },
     status:{
         type:String,

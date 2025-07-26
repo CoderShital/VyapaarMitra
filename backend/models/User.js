@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schama({
+const userSchema = new mongoose.Schema({
     name:{
         type:String,
         required: true
@@ -17,11 +17,10 @@ const userSchema = new mongoose.Schama({
         address: String,
         lng: Number,
         lat: Number,
-        required: true
     },
     role: {
         type: String,
-        enum: ['vendor', 'supplier', 'admin'],
+        enum: ['buyer', 'supplier', 'admin'],
         required: true
     },
     passHash: {
@@ -43,7 +42,7 @@ const userSchema = new mongoose.Schama({
     },
     ratings:{
         stars:{
-            tyep:Number,
+            type:Number,
             default:0
         },
         reviewCount:{
