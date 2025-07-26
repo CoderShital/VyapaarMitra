@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schama({
     },
     passHash: {
         type: String,
-        required: true
+        // required: true
     },
     status: {
         type:String,
