@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDb = async()=>{
     try{
-        const conn = await mongoose.connect('mongodb://127.0.0.1:3000/steetSupply', {
+        const conn = await mongoose.connect('mongodb://127.0.0.1:3000/vyapar_mitra', {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
