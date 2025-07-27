@@ -4,6 +4,7 @@ const app = express();
 const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('./config/db');
+
 connectDB();
 
 app.use(cors());
@@ -16,6 +17,8 @@ app.use('/api/supplier', require('./routes/supplierRoutes'));
 app.use('/api/buyer', require('./routes/buyerRoutes'));
 app.use('/api/materials', require('./routes/materialRoutes'));
 app.use('/api/orders', require('./routes/orderRoutes'));
+app.use('/api/reviews', require('./routes/reviewRoutes'));
+
 
 
 const PORT = process.env.PORT || 3000;
