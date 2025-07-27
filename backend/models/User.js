@@ -23,9 +23,22 @@ const userSchema = new mongoose.Schema({
         enum: ['buyer', 'supplier', 'admin'],
         required: true
     },
+    supplierType: {
+        type: String,
+        enum: ['farmer', 'vendor'],
+        required: function () {
+            return this.role === 'supplier';
+        }
+    },
+    samplePhotoUrl: {
+        type: String,
+        required: function () {
+            return this.role === 'supplier';
+        }
+    },
     passHash: {
         type: String,
-        // required: true
+        required: true
     },
     status: {
         type:String,
