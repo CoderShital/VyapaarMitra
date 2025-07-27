@@ -20,3 +20,8 @@ module.exports.getSupplierOrders = asyncHandler(async (req, res) => {
   const orders = await Order.find({ supplier: req.user._id });
   return res.json(orders);
 });
+
+exports.getMyMaterials = asyncHandler(async (req, res) => {
+  const materials = await Material.find({ supplierId: req.user._id });
+  res.json(materials);
+});
